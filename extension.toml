@@ -1,0 +1,7 @@
+id = "octonato"
+name = "Octonato"
+version = "0.1.0"
+schema_version = 1
+authors = ["Renato Cavalcanti <renato@cavalcanti.be>"]
+description = "Octonato theme family for Zed."
+repository = "https://github.com/octonato/zed-themes"
