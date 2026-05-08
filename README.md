@@ -9,7 +9,7 @@ A small family of editor themes inspired by the [Codigrate JetBrains themes](htt
 | **Octonato Roraima** | Dark | near-black, rust, mustard, warm yellow |
 | **Octonato Everest** | Light | soft slate-blue, teal, peach, forest green |
 
-Variants ship for **Zed** (`zed/`); Autumn, Aurora Borealis, and Roraima also ship for **iTerm2** (`iterm/`).
+Each variant ships for both **Zed** (`zed/`) and **iTerm2** (`iterm/`).
 
 ## Install in Zed (dev extension)
 
@@ -31,6 +31,7 @@ To uninstall, open **`zed: extensions`**, find *Octonato* under the installed ex
    - `iterm/Octonato Autumn.itermcolors`
    - `iterm/Octonato Aurora Borealis.itermcolors`
    - `iterm/Octonato Roraima.itermcolors`
+   - `iterm/Octonato Everest.itermcolors`
 4. Open **Color Presets…** again and pick the imported preset.
 
 Imports are per-profile — switch profiles or repeat the steps for each profile you want themed.
