@@ -7,8 +7,9 @@ A small family of editor themes inspired by the [Codigrate JetBrains themes](htt
 | **Octonato Autumn** | Light | warm cream, terracotta, olive, peach |
 | **Octonato Aurora Borealis** | Dark | deep teal, mauve-pink, sky blue, lime |
 | **Octonato Roraima** | Dark | near-black, rust, mustard, warm yellow |
+| **Octonato Everest** | Light | soft slate-blue, teal, peach, forest green |
 
-Each variant ships for both **Zed** (`zed/`) and **iTerm2** (`iterm/`).
+Variants ship for **Zed** (`zed/`); Autumn, Aurora Borealis, and Roraima also ship for **iTerm2** (`iterm/`).
 
 ## Install in Zed (dev extension)
 
@@ -36,7 +37,7 @@ Imports are per-profile — switch profiles or repeat the steps for each profile
 
 ## Credits
 
-Octonato is derived work. The color palettes come from [Codigrate's JetBrains themes](https://github.com/codigrate/jetbrains-themes) — specifically the *Autumn*, *Aurora Borealis*, and *Roraima* themes — translated into Zed's theme schema and iTerm2's `.itermcolors` plist format. All credit for the visual design goes to Codigrate; this repo contributes only the porting and structural code.
+Octonato is derived work. The color palettes come from [Codigrate's JetBrains themes](https://github.com/codigrate/jetbrains-themes) — specifically the *Autumn*, *Aurora Borealis*, *Roraima*, and *Everest* themes — translated into Zed's theme schema and iTerm2's `.itermcolors` plist format. All credit for the visual design goes to Codigrate; this repo contributes only the porting and structural code.
 
 ## License
 
