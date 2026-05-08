@@ -1,10 +1,10 @@
 {
   "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
-  "name": "Octonato",
+  "name": "OctoThemes",
   "author": "Renato Cavalcanti",
   "themes": [
     {
-      "name": "Octonato Autumn",
+      "name": "Octo Autumn",
       "appearance": "light",
       "style": {
         "border": "#efe6e0ff",
@@ -190,7 +190,7 @@
       }
     },
     {
-      "name": "Octonato Aurora Borealis",
+      "name": "Octo Aurora Borealis",
       "appearance": "dark",
       "style": {
         "border": "#1c3847ff",
@@ -376,7 +376,7 @@
       }
     },
     {
-      "name": "Octonato Roraima",
+      "name": "Octo Roraima",
       "appearance": "dark",
       "style": {
         "border": "#372c2fff",
@@ -562,7 +562,7 @@
       }
     },
     {
-      "name": "Octonato Everest",
+      "name": "Octo Everest",
       "appearance": "light",
       "style": {
         "border": "#cadae0ff",
