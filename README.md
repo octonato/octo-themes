@@ -33,3 +33,11 @@ To uninstall, open **`zed: extensions`**, find *Octonato* under the installed ex
 4. Open **Color Presets…** again and pick the imported preset.
 
 Imports are per-profile — switch profiles or repeat the steps for each profile you want themed.
+
+## Credits
+
+Octonato is derived work. The color palettes come from [Codigrate's JetBrains themes](https://github.com/codigrate/jetbrains-themes) — specifically the *Autumn*, *Aurora Borealis*, and *Roraima* themes — translated into Zed's theme schema and iTerm2's `.itermcolors` plist format. All credit for the visual design goes to Codigrate; this repo contributes only the porting and structural code.
+
+## License
+
+MIT — see [LICENSE](LICENSE). Copyright is shared: the original palettes are © Codigrate, the ports (Zed JSON and iTerm plists in this repo) are © Renato Cavalcanti.
