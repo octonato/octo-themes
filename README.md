@@ -9,7 +9,7 @@ A small family of editor themes inspired by the [Codigrate JetBrains themes](htt
 | **Octo Roraima** | Dark | near-black, rust, mustard, warm yellow |
 | **Octo Everest** | Light | soft slate-blue, teal, peach, forest green |
 
-Each variant ships for both **Zed** (`zed/`) and **iTerm2** (`iterm/`).
+Each variant ships for **Zed** (`zed/`) and **iTerm2** (`iterm/`). **Octo Autumn** also ships as a **Typora** theme (`typora/`).
 
 ## Install in Zed (dev extension)
 
@@ -35,6 +35,29 @@ To uninstall, open **`zed: extensions`**, find *Octo* under the installed extens
 4. Open **Color Presets…** again and pick the imported preset.
 
 Imports are per-profile — switch profiles or repeat the steps for each profile you want themed.
+
+## Install in Typora
+
+**Quick install (macOS):**
+
+```bash
+./typora/install.sh
+```
+
+The script copies `octo-autumn.css` into `~/Library/Application Support/abnerworks.Typora/themes` (creating the folder if needed). Then open Typora and pick **Octo Autumn** from the **Themes** menu (restart Typora if it doesn't appear immediately).
+
+**Manual install (all platforms):**
+
+1. Open **Typora → Preferences… → Appearance**.
+2. Click **Open Theme Folder** to reveal Typora's themes directory.
+   - macOS: `~/Library/Application Support/abnerworks.Typora/themes`
+   - Windows: `%APPDATA%\Typora\themes`
+   - Linux: `~/.config/Typora/themes`
+3. Copy `typora/octo-autumn.css` into that folder.
+4. Restart Typora.
+5. Pick **Octo Autumn** from the **Themes** menu.
+
+Only **Octo Autumn** is available for Typora today. To tweak it, edit `typora/octo-autumn.css` and re-run the install script (or re-copy) — Typora picks up changes on restart.
 
 ## Credits
 

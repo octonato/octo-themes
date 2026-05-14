@@ -1,0 +1,448 @@
+/*
+ * Octo Autumn — Typora theme
+ * Warm cream, terracotta, olive, peach. Light appearance.
+ * Palette ported from the Octo Autumn variant of octo-themes.
+ */
+
+:root {
+  /* surfaces */
+  --bg:              #f8f4f1;
+  --bg-editor:       #ffffff;
+  --bg-elevated:     #efe6e0;
+  --bg-active-line:  #f6eedb;
+  --bg-hover:        #f3d3c7;
+  --bg-selected:     #f4d3bd;
+  --bg-search:       #d5e3bd;
+
+  /* borders */
+  --border:          #efe6e0;
+  --border-strong:   #dfcec2;
+  --border-focus:    #a9c779;
+
+  /* text */
+  --fg:              #2e1b0f;
+  --fg-soft:         #251b13;
+  --fg-muted:        #82614c;
+  --fg-placeholder:  #a58841;
+  --fg-disabled:     #caa48b;
+
+  /* accents */
+  --accent:          #a7714c; /* terracotta */
+  --accent-hover:    #c16a2d;
+  --olive:           #668a2b;
+  --lime:            #6b9a24;
+  --rust:            #be5f3e;
+  --mustard:         #cc9d57;
+  --gold:            #a87f25;
+  --teal:            #286d73;
+  --blue:            #397fb7;
+  --wine:            #9f5161;
+  --red:             #ce5e5e;
+  --green-string:    #1b591e;
+
+  /* selection */
+  --selection-bg:    #f4d3bd;
+
+  /* code */
+  --code-bg:         #fcf7f2;
+  --code-border:     #efe6e0;
+  --code-inline-bg:  #f3e6db;
+}
+
+html {
+  font-size: 16px;
+}
+
+html, body {
+  background-color: var(--bg-editor);
+  color: var(--fg);
+  font-family: "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The page surface fills the full pane width; content column sits at 85% via padding. */
+#write {
+  max-width: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 40px 7.5% 100px; /* 7.5% on each side -> content column = 85% */
+  color: var(--fg);
+  background: var(--bg-editor);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+  margin-top: 30px;
+}
+
+/* selection */
+::selection {
+  background: var(--selection-bg);
+  color: var(--fg);
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Iowan Old Style", Baskerville, "Source Serif Pro", Georgia, serif;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.25;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+h1 {
+  font-size: 2.25em;
+  border-bottom: 2px solid var(--border-strong);
+  padding-bottom: 0.25em;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 1.7em;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 0.2em;
+  color: var(--accent);
+}
+
+h3 { font-size: 1.35em; color: var(--rust); }
+h4 { font-size: 1.15em; color: var(--rust); }
+h5 { font-size: 1em;    color: var(--gold); }
+h6 { font-size: 0.95em; color: var(--gold); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* paragraphs and inline */
+p {
+  line-height: 1.7;
+  margin: 0.9em 0;
+}
+
+a, a:visited {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+}
+
+a:hover {
+  color: var(--accent-hover);
+  border-bottom: 1px solid var(--accent-hover);
+}
+
+strong, b {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+em, i {
+  color: var(--rust);
+  font-style: italic;
+}
+
+mark {
+  background: #f6e3a0;
+  color: var(--fg);
+  padding: 0 0.15em;
+  border-radius: 2px;
+}
+
+del, s {
+  color: var(--fg-disabled);
+}
+
+/* blockquote */
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 0.4em 1em;
+  margin: 1em 0;
+  background: #fbf1ea;
+  color: var(--fg-muted);
+  border-radius: 0 4px 4px 0;
+}
+
+blockquote p {
+  margin: 0.4em 0;
+}
+
+/* lists */
+ul, ol {
+  padding-left: 1.6em;
+}
+
+li {
+  margin: 0.25em 0;
+}
+
+li::marker {
+  color: var(--rust);
+}
+
+ul li.task-list-item {
+  list-style-type: none;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--lime);
+}
+
+/* horizontal rule */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-strong);
+  margin: 2em 0;
+}
+
+/* tables */
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+  width: 100%;
+}
+
+table th,
+table td {
+  border: 1px solid var(--border-strong);
+  padding: 0.45em 0.75em;
+}
+
+table th {
+  background: var(--bg-elevated);
+  color: var(--fg);
+  font-weight: 700;
+  text-align: left;
+}
+
+table tr:nth-child(even) td {
+  background: #fbf6f1;
+}
+
+/* inline code */
+code, tt {
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  background: var(--code-inline-bg);
+  color: var(--accent-hover);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+/* fenced code blocks */
+.md-fences,
+pre.md-fences,
+.CodeMirror {
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 5px;
+  color: var(--fg);
+  font-size: 0.92em;
+  padding: 0.6em 0.9em;
+}
+
+.md-fences {
+  margin: 1em 0;
+}
+
+.CodeMirror {
+  color: var(--fg);
+  background: transparent;
+}
+
+.CodeMirror-gutters {
+  background: transparent;
+  border-right: 1px solid var(--border);
+}
+
+.CodeMirror-linenumber {
+  color: var(--fg-placeholder);
+}
+
+.CodeMirror-activeline-background {
+  background: var(--bg-active-line) !important;
+}
+
+.CodeMirror-selected,
+.CodeMirror-focused .CodeMirror-selected {
+  background: var(--bg-selected) !important;
+}
+
+.CodeMirror-cursor {
+  border-left: 1.6px solid var(--lime);
+}
+
+/* CodeMirror syntax — mapped to Octo Autumn syntax palette */
+.cm-s-default .cm-comment           { color: #8d7e79; font-style: italic; }
+.cm-s-default .cm-keyword           { color: #006e83; }
+.cm-s-default .cm-atom              { color: var(--gold); }
+.cm-s-default .cm-number            { color: var(--green-string); }
+.cm-s-default .cm-def               { color: var(--accent-hover); }
+.cm-s-default .cm-variable          { color: var(--fg); }
+.cm-s-default .cm-variable-2        { color: var(--fg); }
+.cm-s-default .cm-variable-3,
+.cm-s-default .cm-type              { color: var(--gold); }
+.cm-s-default .cm-property          { color: var(--gold); }
+.cm-s-default .cm-operator          { color: var(--fg-muted); }
+.cm-s-default .cm-string            { color: var(--green-string); }
+.cm-s-default .cm-string-2          { color: var(--green-string); }
+.cm-s-default .cm-meta              { color: #773918; }
+.cm-s-default .cm-qualifier         { color: var(--accent); }
+.cm-s-default .cm-builtin           { color: var(--gold); }
+.cm-s-default .cm-bracket           { color: var(--fg-muted); }
+.cm-s-default .cm-tag               { color: var(--rust); }
+.cm-s-default .cm-attribute         { color: var(--olive); }
+.cm-s-default .cm-header            { color: var(--accent); font-weight: 700; }
+.cm-s-default .cm-quote             { color: var(--fg-muted); font-style: italic; }
+.cm-s-default .cm-hr                { color: var(--border-strong); }
+.cm-s-default .cm-link              { color: var(--blue); text-decoration: underline; }
+.cm-s-default .cm-error             { color: var(--red); }
+
+/* images */
+#write img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+/* footnotes */
+.md-footnote {
+  background: var(--bg-elevated);
+  color: var(--accent);
+}
+
+sup.md-footnote {
+  padding: 0 0.25em;
+  border-radius: 3px;
+}
+
+/* task lists */
+.task-list-item-checkbox {
+  margin-right: 0.4em;
+}
+
+/* yaml / front matter */
+.md-meta-block {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 4px;
+  padding: 0.5em 0.8em;
+  color: var(--fg-muted);
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+}
+
+/* math */
+.md-math-block,
+.md-inline-math-container {
+  color: var(--fg);
+}
+
+/* sidebar / file tree */
+#typora-sidebar,
+.sidebar-content-content,
+.typora-sourceview-on #typora-sidebar {
+  background: var(--bg);
+  color: var(--fg);
+  border-right: 1px solid var(--border);
+}
+
+.sidebar-tabs {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-tab {
+  color: var(--fg-muted);
+}
+
+.sidebar-tab.active {
+  color: var(--accent);
+}
+
+.file-list-item.active,
+.file-tree-node.active > .file-node-content {
+  background: #e5f4cd; /* soft olive tint */
+  color: var(--fg);
+  box-shadow: inset 3px 0 0 var(--olive);
+}
+
+.file-list-item:hover,
+.file-tree-node:hover > .file-node-content {
+  background: #f0f8de; /* light olive tint — softer than the selected state */
+}
+
+.file-node-icon,
+.file-list-item-summary {
+  color: var(--fg-muted);
+}
+
+/* outline panel */
+.outline-content {
+  color: var(--fg);
+}
+
+.outline-item:hover {
+  background: #f0f8de; /* light olive tint, matches sidebar hover */
+}
+
+.outline-item.active {
+  background: #e5f4cd; /* soft olive tint, matches sidebar selected */
+  color: var(--fg);
+  box-shadow: inset 3px 0 0 var(--olive);
+}
+
+/* search highlight */
+.md-search-hit {
+  background: var(--bg-search);
+  color: var(--fg);
+  border-radius: 2px;
+}
+
+.md-search-hit.md-search-select {
+  background: var(--mustard);
+  color: var(--fg);
+}
+
+/* title bar / window */
+#top-titlebar,
+header,
+.context-menu,
+#footer,
+#footer-word-count-info {
+  background: var(--bg);
+  color: var(--fg-muted);
+  border-color: var(--border);
+}
+
+#footer {
+  border-top: 1px solid var(--border);
+}
+
+/* source mode */
+#typora-source .CodeMirror {
+  font-family: "JetBrains Mono", "Fira Code", "SF Mono", Menlo, monospace;
+  background: var(--code-bg);
+  color: var(--fg);
+}
+
+/* focus mode dimming uses default; ensure focused text stays readable */
+.on-focus-mode blockquote,
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+  color: var(--fg-disabled) !important;
+}
+
+/* typewriter mode */
+.typewriter #write {
+  background: var(--bg-editor);
+}
+
+/* print: white background */
+@media print {
+  html, body, #write {
+    background: #ffffff;
+    color: #000000;
+  }
+}
