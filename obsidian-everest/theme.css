@@ -1,0 +1,466 @@
+/*
+ * Octo Everest — Obsidian theme
+ * Follows Obsidian's light/dark toggle:
+ *   - Light: Octo Everest — soft slate-blue, teal, peach, forest green.
+ *   - Dark:  Octo Aurora Borealis — deep teal, sky blue, mauve-pink, lime.
+ * Palettes ported from the Octo Everest and Aurora Borealis variants of
+ * octo-themes. Switch via Settings -> Appearance -> Base color scheme.
+ */
+
+.theme-light {
+  /* --- Octo Everest palette --- */
+  --evr-bg:              #e4ecef;  /* soft slate — chrome / sidebars */
+  --evr-bg-editor:       #fdfeff;  /* note surface */
+  --evr-bg-elevated:     #cadae0;  /* elevated surfaces */
+  --evr-bg-active-line:  #e6edf5;  /* active line tint */
+  --evr-bg-hover:        #d8eaf0;  /* soft teal hover */
+  --evr-bg-active:       #b6d8e5;  /* teal selected */
+  --evr-bg-selected:     #f6d4c8;  /* peach text selection */
+  --evr-bg-search:       #f6d4c8;  /* search match */
+
+  --evr-border:          #cadae0;
+  --evr-border-strong:   #bccdd5;
+  --evr-border-focus:    #7ebbd5;
+
+  --evr-fg:              #0e3448;
+  --evr-fg-soft:         #131b25;
+  --evr-fg-muted:        #567b8a;
+  --evr-fg-placeholder:  #7d9aa6;
+  --evr-fg-disabled:     #adc6d0;
+
+  --evr-accent:          #246a89;  /* deep teal */
+  --evr-accent-hover:    #1a6687;
+  --evr-sky:             #7ebbd5;
+  --evr-coral:           #ed7e5a;  /* peach / coral */
+  --evr-rust:            #a64825;
+  --evr-forest:          #2e674f;  /* forest green */
+  --evr-green:           #007a47;
+  --evr-success:         #30a25e;
+  --evr-string:          #005e79;  /* deep cyan — strings / numbers */
+  --evr-purple:          #83529b;
+  --evr-magenta:         #8c4069;
+  --evr-wine:            #9f5161;
+  --evr-blue:            #397fb7;
+  --evr-link:            #286da6;
+  --evr-mustard:         #cc9d57;
+  --evr-red:             #ce5e5e;
+  --evr-comment:         #6e828f;
+  --evr-tag-code:        #8d5f5d;
+
+  --evr-code-bg:         #eef4f7;
+  --evr-code-inline-bg:  #dde9ee;
+
+  /* --- surfaces --- */
+  --background-primary:        var(--evr-bg-editor);
+  --background-primary-alt:     var(--evr-bg-active-line);
+  --background-secondary:       var(--evr-bg);
+  --background-secondary-alt:    var(--evr-bg-elevated);
+  --background-modifier-border:        var(--evr-border);
+  --background-modifier-border-hover:  var(--evr-border-strong);
+  --background-modifier-border-focus:  var(--evr-border-focus);
+  --background-modifier-hover:         var(--evr-bg-hover);
+  --background-modifier-active-hover:  var(--evr-bg-active);
+  --background-modifier-form-field:    var(--evr-bg-editor);
+  --background-modifier-success:       var(--evr-success);
+  --background-modifier-error:         var(--evr-red);
+  --background-modifier-error-hover:   var(--evr-red);
+
+  /* --- text --- */
+  --text-normal:        var(--evr-fg);
+  --text-muted:          var(--evr-fg-muted);
+  --text-faint:          var(--evr-fg-placeholder);
+  --text-on-accent:      #ffffff;
+  --text-error:          var(--evr-red);
+  --text-success:        var(--evr-success);
+  --text-accent:         var(--evr-accent);
+  --text-accent-hover:    var(--evr-accent-hover);
+  --text-selection:      var(--evr-bg-selected);
+  --text-highlight-bg:    #f6e3a0;
+
+  /* --- interactive / accents --- */
+  --interactive-normal:        var(--evr-bg-elevated);
+  --interactive-hover:          var(--evr-border-strong);
+  --interactive-accent:         var(--evr-accent);
+  --interactive-accent-hover:    var(--evr-accent-hover);
+  --interactive-success:        var(--evr-success);
+  --caret-color:               var(--evr-coral);
+
+  /* --- headings — everest gradient: teal -> coral -> forest --- */
+  --h1-color: var(--evr-accent);
+  --h2-color: var(--evr-accent);
+  --h3-color: var(--evr-coral);
+  --h4-color: var(--evr-coral);
+  --h5-color: var(--evr-forest);
+  --h6-color: var(--evr-forest);
+  --h1-weight: 700;
+  --h2-weight: 700;
+
+  /* --- inline emphasis --- */
+  --bold-color:    var(--evr-accent);
+  --italic-color:  var(--evr-coral);
+  --text-bold:     var(--evr-accent);
+  --text-italic:   var(--evr-coral);
+
+  /* --- links --- */
+  --link-color:            var(--evr-accent);
+  --link-color-hover:       var(--evr-accent-hover);
+  --link-unresolved-color:  var(--evr-wine);
+  --link-external-color:     var(--evr-link);
+  --link-external-color-hover: var(--evr-link);
+
+  /* --- blockquote --- */
+  --blockquote-border-color:    var(--evr-accent);
+  --blockquote-background-color: #e7eff2;
+  --blockquote-color:           var(--evr-fg-muted);
+
+  /* --- horizontal rule --- */
+  --hr-color: var(--evr-border-strong);
+
+  /* --- tables --- */
+  --table-border-color:        var(--evr-border-strong);
+  --table-header-background:     var(--evr-bg-elevated);
+  --table-row-alt-background:    #edf3f6;
+  --table-header-color:         var(--evr-fg);
+
+  /* --- tags --- */
+  --tag-color:       var(--evr-accent);
+  --tag-background:   var(--evr-code-inline-bg);
+  --tag-border-color: var(--evr-border-strong);
+
+  /* --- lists --- */
+  --list-marker-color: var(--evr-coral);
+  --checkbox-color:    var(--evr-success);
+  --checkbox-color-hover: var(--evr-accent);
+  --checkbox-marker-color: #ffffff;
+
+  /* --- code (inline + block container) --- */
+  --code-background:  var(--evr-code-bg);
+  --code-normal:      var(--evr-fg-soft);
+  --code-comment:     var(--evr-comment);
+  --code-keyword:     var(--evr-forest);
+  --code-function:    var(--evr-green);
+  --code-string:      var(--evr-string);
+  --code-property:    var(--evr-green);
+  --code-operator:    var(--evr-fg-muted);
+  --code-tag:         var(--evr-tag-code);
+  --code-value:       var(--evr-string);
+  --code-punctuation: var(--evr-fg-muted);
+  --code-important:   var(--evr-coral);
+
+  /* --- scrollbar --- */
+  --scrollbar-thumb-bg:        #c3dbe580;
+  --scrollbar-active-thumb-bg:  var(--evr-border-focus);
+  --scrollbar-bg:              transparent;
+
+  /* --- graph view --- */
+  --graph-line:    var(--evr-border-strong);
+  --graph-node:    var(--evr-accent);
+  --graph-node-unresolved: var(--evr-fg-disabled);
+  --graph-node-focused:    var(--evr-coral);
+  --graph-node-tag:        var(--evr-forest);
+  --graph-node-attachment: var(--evr-mustard);
+}
+
+/* Inline code: teal text on a soft slate tint. */
+.theme-light .markdown-rendered code,
+.theme-light .cm-inline-code {
+  background: var(--evr-code-inline-bg);
+  color: var(--evr-accent);
+}
+
+/* Fenced code blocks get a defined border to sit apart from the page. */
+.theme-light .markdown-rendered pre,
+.theme-light .HyperMD-codeblock-bg {
+  border: 1px solid var(--evr-border);
+  border-radius: 5px;
+}
+
+/* Active line tint in Live Preview / Source mode. */
+.theme-light .cm-active.cm-line,
+.theme-light .cm-active.HyperMD-codeblock {
+  background-color: var(--evr-bg-active-line);
+}
+
+/* Text selection. */
+.theme-light .cm-selectionBackground,
+.theme-light ::selection {
+  background: var(--evr-bg-selected) !important;
+}
+
+/* File explorer: teal tints for hover/active, with a teal accent bar. */
+.theme-light .nav-file-title:hover,
+.theme-light .nav-folder-title:hover {
+  background-color: var(--evr-bg-hover);
+}
+
+.theme-light .nav-file-title.is-active,
+.theme-light .tree-item-self.is-active {
+  background-color: var(--evr-bg-active);
+  box-shadow: inset 3px 0 0 var(--evr-accent);
+  color: var(--evr-fg);
+}
+
+/* Search highlights. */
+.theme-light .search-result-file-matched-text,
+.theme-light .document-search-container .search-result-file-matched-text {
+  background-color: var(--evr-bg-search);
+  color: var(--evr-fg);
+}
+
+/* Active tab header. */
+.theme-light .workspace-tab-header.is-active {
+  background-color: var(--evr-bg-editor);
+}
+
+/* ===================================================================
+ * Dark mode — Octo Aurora Borealis
+ * Deep teal base, sky blue / mauve-pink / lime accents.
+ * Ported from the Octo Aurora Borealis variant of octo-themes.
+ * =================================================================== */
+
+.theme-dark {
+  /* --- Aurora Borealis palette --- */
+  --aur-bg:              #123243;  /* deep teal — chrome / sidebars */
+  --aur-bg-editor:       #142b37;  /* note surface */
+  --aur-bg-elevated:     #1a3746;  /* elevated surfaces */
+  --aur-bg-active-line:  #2b3949;  /* active line tint */
+  --aur-bg-hover:        #1a3746;  /* subtle lift on hover */
+  --aur-bg-active:       #1e3f53;  /* selected item */
+  --aur-bg-selected:     #1e3f53;  /* text selection */
+  --aur-bg-search:       #244b60;  /* search match */
+  --aur-bg-code:         #11242f;  /* code block surface */
+
+  --aur-border:          #1c3847;
+  --aur-border-strong:   #233c4a;
+  --aur-border-focus:    #049682;
+
+  --aur-fg:              #e0e2e3;
+  --aur-fg-muted:        #85a2b3;
+  --aur-fg-faint:        #3f6579;
+
+  --aur-sky:             #7ac6f5;  /* sky blue */
+  --aur-sky-bright:      #a3dbf9;
+  --aur-blue:            #4693d2;
+  --aur-blue-fn:         #4ca7ea;
+  --aur-teal:            #049682;
+  --aur-cyan:            #08b9a1;
+  --aur-cyan-bright:     #3cd0ff;
+  --aur-mauve:           #bb719b;  /* mauve-pink */
+  --aur-mauve-bright:    #d193bb;
+  --aur-green:           #46d27e;  /* lime/green */
+  --aur-green-soft:      #73d379;
+  --aur-string:          #549eff;  /* strings / numbers */
+  --aur-property:        #7acef5;
+  --aur-mustard:         #cc9d57;
+  --aur-red:             #ce5e5e;
+  --aur-comment:         #a996b9;
+  --aur-preproc:         #79bdc0;
+
+  /* --- surfaces --- */
+  --background-primary:        var(--aur-bg-editor);
+  --background-primary-alt:     var(--aur-bg-active-line);
+  --background-secondary:       var(--aur-bg);
+  --background-secondary-alt:    var(--aur-bg-elevated);
+  --background-modifier-border:        var(--aur-border);
+  --background-modifier-border-hover:  var(--aur-border-strong);
+  --background-modifier-border-focus:  var(--aur-border-focus);
+  --background-modifier-hover:         var(--aur-bg-hover);
+  --background-modifier-active-hover:  var(--aur-bg-active);
+  --background-modifier-form-field:    var(--aur-bg-editor);
+  --background-modifier-success:       var(--aur-green);
+  --background-modifier-error:         var(--aur-red);
+  --background-modifier-error-hover:   var(--aur-red);
+
+  /* --- text --- */
+  --text-normal:        var(--aur-fg);
+  --text-muted:          var(--aur-fg-muted);
+  --text-faint:          var(--aur-fg-faint);
+  --text-on-accent:      #0a151b;
+  --text-error:          var(--aur-red);
+  --text-success:        var(--aur-green);
+  --text-accent:         var(--aur-sky);
+  --text-accent-hover:    var(--aur-sky-bright);
+  --text-selection:      var(--aur-bg-selected);
+  --text-highlight-bg:    #6b5320;
+
+  /* --- interactive / accents --- */
+  --interactive-normal:        var(--aur-bg-elevated);
+  --interactive-hover:          var(--aur-border-strong);
+  --interactive-accent:         var(--aur-sky);
+  --interactive-accent-hover:    var(--aur-sky-bright);
+  --interactive-success:        var(--aur-green);
+  --caret-color:               var(--aur-cyan-bright);
+
+  /* --- headings — aurora gradient: sky -> cyan -> mauve --- */
+  --h1-color: var(--aur-sky);
+  --h2-color: var(--aur-sky);
+  --h3-color: var(--aur-cyan);
+  --h4-color: var(--aur-cyan);
+  --h5-color: var(--aur-mauve);
+  --h6-color: var(--aur-mauve);
+  --h1-weight: 700;
+  --h2-weight: 700;
+
+  /* --- inline emphasis --- */
+  --bold-color:    var(--aur-sky);
+  --italic-color:  var(--aur-mauve-bright);
+  --text-bold:     var(--aur-sky);
+  --text-italic:   var(--aur-mauve-bright);
+
+  /* --- links --- */
+  --link-color:            var(--aur-sky);
+  --link-color-hover:       var(--aur-sky-bright);
+  --link-unresolved-color:  var(--aur-mauve);
+  --link-external-color:     var(--aur-blue);
+  --link-external-color-hover: var(--aur-sky);
+
+  /* --- blockquote --- */
+  --blockquote-border-color:    var(--aur-teal);
+  --blockquote-background-color: #15323f;
+  --blockquote-color:           var(--aur-fg-muted);
+
+  /* --- horizontal rule --- */
+  --hr-color: var(--aur-border-strong);
+
+  /* --- tables --- */
+  --table-border-color:        var(--aur-border);
+  --table-header-background:     var(--aur-bg-elevated);
+  --table-row-alt-background:    #15323f;
+  --table-header-color:         var(--aur-fg);
+
+  /* --- tags --- */
+  --tag-color:       var(--aur-sky);
+  --tag-background:   var(--aur-bg-elevated);
+  --tag-border-color: var(--aur-border-strong);
+
+  /* --- lists --- */
+  --list-marker-color: var(--aur-cyan);
+  --checkbox-color:    var(--aur-green);
+  --checkbox-color-hover: var(--aur-cyan);
+  --checkbox-marker-color: #0a151b;
+
+  /* --- code (inline + block container) --- */
+  --code-background:  var(--aur-bg-code);
+  --code-normal:      var(--aur-fg);
+  --code-comment:     var(--aur-comment);
+  --code-keyword:     var(--aur-mauve);
+  --code-function:    var(--aur-blue-fn);
+  --code-string:      var(--aur-string);
+  --code-property:    var(--aur-property);
+  --code-operator:    var(--aur-fg-muted);
+  --code-tag:         var(--aur-cyan);
+  --code-value:       var(--aur-string);
+  --code-punctuation: var(--aur-fg-muted);
+  --code-important:   var(--aur-mauve-bright);
+
+  /* --- scrollbar --- */
+  --scrollbar-thumb-bg:        #153c4f99;
+  --scrollbar-active-thumb-bg:  var(--aur-teal);
+  --scrollbar-bg:              transparent;
+
+  /* --- graph view --- */
+  --graph-line:    var(--aur-border);
+  --graph-node:    var(--aur-sky);
+  --graph-node-unresolved: var(--aur-fg-faint);
+  --graph-node-focused:    var(--aur-cyan);
+  --graph-node-tag:        var(--aur-mauve);
+  --graph-node-attachment: var(--aur-mustard);
+}
+
+/* Inline code: sky-blue text on a lifted surface. */
+.theme-dark .markdown-rendered code,
+.theme-dark .cm-inline-code {
+  background: var(--aur-bg-elevated);
+  color: var(--aur-sky);
+}
+
+/* Fenced code blocks get a defined border to sit apart from the page. */
+.theme-dark .markdown-rendered pre,
+.theme-dark .HyperMD-codeblock-bg {
+  border: 1px solid var(--aur-border);
+  border-radius: 5px;
+}
+
+/* Active line tint in Live Preview / Source mode. */
+.theme-dark .cm-active.cm-line,
+.theme-dark .cm-active.HyperMD-codeblock {
+  background-color: var(--aur-bg-active-line);
+}
+
+/* Text selection. */
+.theme-dark .cm-selectionBackground,
+.theme-dark ::selection {
+  background: var(--aur-bg-selected) !important;
+}
+
+/* File explorer: teal tints for hover/active, with a cyan accent bar. */
+.theme-dark .nav-file-title:hover,
+.theme-dark .nav-folder-title:hover {
+  background-color: var(--aur-bg-hover);
+}
+
+.theme-dark .nav-file-title.is-active,
+.theme-dark .tree-item-self.is-active {
+  background-color: var(--aur-bg-active);
+  box-shadow: inset 3px 0 0 var(--aur-cyan);
+  color: var(--aur-fg);
+}
+
+/* Search highlights. */
+.theme-dark .search-result-file-matched-text,
+.theme-dark .document-search-container .search-result-file-matched-text {
+  background-color: var(--aur-bg-search);
+  color: var(--aur-fg);
+}
+
+/* Active tab header. */
+.theme-dark .workspace-tab-header.is-active {
+  background-color: var(--aur-bg-editor);
+}
+
+/* ===================================================================
+ * Layout — content column spans 90% of the view (both light & dark).
+ * Applies in Reading view and Live Preview, with or without Obsidian's
+ * "Readable line length" setting enabled.
+ * =================================================================== */
+
+/* Canonical knob: drives width when "Readable line length" is on. */
+body {
+  --file-line-width: 95%;
+}
+
+/* Fallback: also widen the sizers directly so it holds when readable
+ * line length is off, and keep the column centred. */
+.markdown-preview-view .markdown-preview-sizer,
+.markdown-source-view.mod-cm6 .cm-sizer {
+  max-width: 90% !important;
+  margin-inline: auto;
+}
+
+/* ===================================================================
+ * obsidian-terminal plugin (polyipseity/obsidian-terminal)
+ *
+ * Its FollowThemeAddon builds the xterm background/foreground/cursor by
+ * reading --background-primary / --text-normal / --interactive-accent off
+ * the terminal element. The global --background-primary is the note surface
+ * (white in light mode), which is why the terminal shows white. We scope a
+ * themed surface onto the terminal leaf so the addon picks it up.
+ *
+ * The 16 ANSI colours are drawn on a Canvas/WebGL surface and cannot be set
+ * from CSS — paste the Octo ANSI palette into the plugin's terminal options
+ * (see README "Terminal plugin (obsidian-terminal)").
+ * =================================================================== */
+
+/* Light — Octo Everest: soft slate surface, coral cursor. */
+.theme-light .workspace-leaf-content[data-type$="terminal"] {
+  --background-primary: var(--evr-bg);         /* #e4ecef */
+  --text-normal:        var(--evr-fg);          /* #0e3448 */
+  --interactive-accent: var(--evr-coral);       /* #ed7e5a cursor */
+}
+
+/* Dark — Octo Aurora Borealis: deep teal surface, cyan cursor. */
+.theme-dark .workspace-leaf-content[data-type$="terminal"] {
+  --background-primary: var(--aur-bg-editor);  /* #142b37 */
+  --text-normal:        var(--aur-fg);          /* #e0e2e3 */
+  --interactive-accent: var(--aur-cyan-bright); /* #3cd0ff cursor */
+}
