@@ -433,3 +433,31 @@ body {
   max-width: 90% !important;
   margin-inline: auto;
 }
+
+/* ===================================================================
+ * obsidian-terminal plugin (polyipseity/obsidian-terminal)
+ *
+ * Its FollowThemeAddon builds the xterm background/foreground/cursor by
+ * reading --background-primary / --text-normal / --interactive-accent off
+ * the terminal element. The global --background-primary is the note surface
+ * (white in light mode), which is why the terminal shows white. We scope a
+ * themed surface onto the terminal leaf so the addon picks it up.
+ *
+ * The 16 ANSI colours are drawn on a Canvas/WebGL surface and cannot be set
+ * from CSS — paste the Octo ANSI palette into the plugin's terminal options
+ * (see README "Terminal plugin (obsidian-terminal)").
+ * =================================================================== */
+
+/* Light — Octo Autumn: warm cream surface, lime cursor. */
+.theme-light .workspace-leaf-content[data-type$="terminal"] {
+  --background-primary: var(--octo-bg);       /* #f8f4f1 */
+  --text-normal:        var(--octo-fg);        /* #2e1b0f */
+  --interactive-accent: var(--octo-lime);      /* #6b9a24 cursor */
+}
+
+/* Dark — Octo Aurora Borealis: deep teal surface, cyan cursor. */
+.theme-dark .workspace-leaf-content[data-type$="terminal"] {
+  --background-primary: var(--aur-bg-editor);  /* #142b37 */
+  --text-normal:        var(--aur-fg);          /* #e0e2e3 */
+  --interactive-accent: var(--aur-cyan-bright); /* #3cd0ff cursor */
+}
