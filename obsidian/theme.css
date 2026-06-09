@@ -1,0 +1,211 @@
+/*
+ * Octo Autumn — Obsidian theme
+ * Warm cream, terracotta, olive, peach. Light appearance.
+ * Palette ported from the Octo Autumn variant of octo-themes.
+ *
+ * Autumn is a light theme: it styles `.theme-light`. Switch Obsidian to
+ * light mode (Settings -> Appearance -> Base color scheme -> Light) for the
+ * intended look. Dark mode falls back to Obsidian's defaults.
+ */
+
+.theme-light {
+  /* --- Octo Autumn palette --- */
+  --octo-bg:              #f8f4f1;  /* cream — chrome / sidebars */
+  --octo-bg-editor:       #ffffff;  /* note surface */
+  --octo-bg-elevated:     #efe6e0;  /* elevated surfaces */
+  --octo-bg-active-line:  #f6eedb;  /* active line tint */
+  --octo-bg-hover:        #f0f8de;  /* light olive hover */
+  --octo-bg-active:       #e5f4cd;  /* soft olive selected */
+  --octo-bg-selected:     #f4d3bd;  /* peach text selection */
+  --octo-bg-search:       #d5e3bd;  /* search match */
+
+  --octo-border:          #efe6e0;
+  --octo-border-strong:   #dfcec2;
+  --octo-border-focus:    #a9c779;
+
+  --octo-fg:              #2e1b0f;
+  --octo-fg-soft:         #251b13;
+  --octo-fg-muted:        #82614c;
+  --octo-fg-placeholder:  #a58841;
+  --octo-fg-disabled:     #caa48b;
+
+  --octo-accent:          #a7714c;  /* terracotta */
+  --octo-accent-hover:    #c16a2d;
+  --octo-olive:           #668a2b;
+  --octo-lime:            #6b9a24;
+  --octo-rust:            #be5f3e;
+  --octo-mustard:         #cc9d57;
+  --octo-gold:            #a87f25;
+  --octo-teal:            #286d73;
+  --octo-blue:            #397fb7;
+  --octo-wine:            #9f5161;
+  --octo-red:             #ce5e5e;
+  --octo-green:           #1b591e;  /* strings / success-ish */
+  --octo-keyword:         #006e83;  /* deep teal */
+  --octo-comment:         #8d7e79;
+  --octo-preproc:         #773918;
+
+  --octo-code-bg:         #fcf7f2;
+  --octo-code-inline-bg:  #f3e6db;
+
+  /* --- surfaces --- */
+  --background-primary:        var(--octo-bg-editor);
+  --background-primary-alt:     var(--octo-bg-active-line);
+  --background-secondary:       var(--octo-bg);
+  --background-secondary-alt:    var(--octo-bg-elevated);
+  --background-modifier-border:        var(--octo-border);
+  --background-modifier-border-hover:  var(--octo-border-strong);
+  --background-modifier-border-focus:  var(--octo-border-focus);
+  --background-modifier-hover:         var(--octo-bg-hover);
+  --background-modifier-active-hover:  var(--octo-bg-active);
+  --background-modifier-form-field:    var(--octo-bg-editor);
+  --background-modifier-success:       #30a25e;
+  --background-modifier-error:         var(--octo-red);
+  --background-modifier-error-hover:   var(--octo-red);
+
+  /* --- text --- */
+  --text-normal:        var(--octo-fg);
+  --text-muted:          var(--octo-fg-muted);
+  --text-faint:          var(--octo-fg-placeholder);
+  --text-on-accent:      #ffffff;
+  --text-error:          var(--octo-red);
+  --text-success:        #30a25e;
+  --text-accent:         var(--octo-accent);
+  --text-accent-hover:    var(--octo-accent-hover);
+  --text-selection:      var(--octo-bg-selected);
+  --text-highlight-bg:    #f6e3a0;
+
+  /* --- interactive / accents --- */
+  --interactive-normal:        var(--octo-bg-elevated);
+  --interactive-hover:          var(--octo-border-strong);
+  --interactive-accent:         var(--octo-accent);
+  --interactive-accent-hover:    var(--octo-accent-hover);
+  --interactive-success:        #30a25e;
+  --caret-color:               var(--octo-lime);
+
+  /* --- headings --- */
+  --h1-color: var(--octo-accent);
+  --h2-color: var(--octo-accent);
+  --h3-color: var(--octo-rust);
+  --h4-color: var(--octo-rust);
+  --h5-color: var(--octo-gold);
+  --h6-color: var(--octo-gold);
+  --h1-weight: 700;
+  --h2-weight: 700;
+
+  /* --- inline emphasis --- */
+  --bold-color:    var(--octo-accent);
+  --italic-color:  var(--octo-rust);
+  --text-bold:     var(--octo-accent);
+  --text-italic:   var(--octo-rust);
+
+  /* --- links --- */
+  --link-color:            var(--octo-accent);
+  --link-color-hover:       var(--octo-accent-hover);
+  --link-unresolved-color:  var(--octo-wine);
+  --link-external-color:     var(--octo-blue);
+  --link-external-color-hover: var(--octo-blue);
+
+  /* --- blockquote --- */
+  --blockquote-border-color:    var(--octo-accent);
+  --blockquote-background-color: #fbf1ea;
+  --blockquote-color:           var(--octo-fg-muted);
+
+  /* --- horizontal rule --- */
+  --hr-color: var(--octo-border-strong);
+
+  /* --- tables --- */
+  --table-border-color:        var(--octo-border-strong);
+  --table-header-background:     var(--octo-bg-elevated);
+  --table-row-alt-background:    #fbf6f1;
+  --table-header-color:         var(--octo-fg);
+
+  /* --- tags --- */
+  --tag-color:       var(--octo-accent);
+  --tag-background:   var(--octo-code-inline-bg);
+  --tag-border-color: var(--octo-border-strong);
+
+  /* --- lists --- */
+  --list-marker-color: var(--octo-rust);
+  --checkbox-color:    var(--octo-lime);
+  --checkbox-color-hover: var(--octo-olive);
+  --checkbox-marker-color: #ffffff;
+
+  /* --- code (inline + block container) --- */
+  --code-background:  var(--octo-code-bg);
+  --code-normal:      var(--octo-fg);
+  --code-comment:     var(--octo-comment);
+  --code-keyword:     var(--octo-keyword);
+  --code-function:    var(--octo-accent-hover);
+  --code-string:      var(--octo-green);
+  --code-property:    var(--octo-gold);
+  --code-operator:    var(--octo-fg-muted);
+  --code-tag:         var(--octo-rust);
+  --code-value:       var(--octo-green);
+  --code-punctuation: var(--octo-fg-muted);
+  --code-important:   var(--octo-rust);
+
+  /* --- scrollbar --- */
+  --scrollbar-thumb-bg:        #caa48b88;
+  --scrollbar-active-thumb-bg:  var(--octo-accent);
+  --scrollbar-bg:              transparent;
+
+  /* --- graph view --- */
+  --graph-line:    var(--octo-border-strong);
+  --graph-node:    var(--octo-accent);
+  --graph-node-unresolved: var(--octo-fg-disabled);
+  --graph-node-focused:    var(--octo-rust);
+  --graph-node-tag:        var(--octo-olive);
+  --graph-node-attachment: var(--octo-gold);
+}
+
+/* Inline code: warm tint + terracotta text, matching the Typora port. */
+.theme-light .markdown-rendered code,
+.theme-light .cm-inline-code {
+  background: var(--octo-code-inline-bg);
+  color: var(--octo-accent-hover);
+}
+
+/* Fenced code blocks get a defined border to sit apart from the page. */
+.theme-light .markdown-rendered pre,
+.theme-light .HyperMD-codeblock-bg {
+  border: 1px solid var(--octo-border);
+  border-radius: 5px;
+}
+
+/* Active line tint in Live Preview / Source mode. */
+.theme-light .cm-active.cm-line,
+.theme-light .cm-active.HyperMD-codeblock {
+  background-color: var(--octo-bg-active-line);
+}
+
+/* Text selection. */
+.theme-light .cm-selectionBackground,
+.theme-light ::selection {
+  background: var(--octo-bg-selected) !important;
+}
+
+/* File explorer: olive tints for hover/active, matching the Typora file tree. */
+.theme-light .nav-file-title:hover,
+.theme-light .nav-folder-title:hover {
+  background-color: var(--octo-bg-hover);
+}
+
+.theme-light .nav-file-title.is-active,
+.theme-light .tree-item-self.is-active {
+  background-color: var(--octo-bg-active);
+  box-shadow: inset 3px 0 0 var(--octo-olive);
+  color: var(--octo-fg);
+}
+
+/* Search highlights. */
+.theme-light .search-result-file-matched-text,
+.theme-light .document-search-container .search-result-file-matched-text {
+  background-color: var(--octo-bg-search);
+  color: var(--octo-fg);
+}
+
+/* Active tab header. */
+.theme-light .workspace-tab-header.is-active {
+  background-color: var(--octo-bg-editor);
+}

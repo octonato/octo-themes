@@ -9,7 +9,7 @@ A small family of editor themes inspired by the [Codigrate JetBrains themes](htt
 | **Octo Roraima** | Dark | near-black, rust, mustard, warm yellow |
 | **Octo Everest** | Light | soft slate-blue, teal, peach, forest green |
 
-Each variant ships for **Zed** (`zed/`) and **iTerm2** (`iterm/`). **Octo Autumn** also ships as a **Typora** theme (`typora/`).
+Each variant ships for **Zed** (`zed/`) and **iTerm2** (`iterm/`). **Octo Autumn** also ships as a **Typora** theme (`typora/`) and an **Obsidian** theme (`obsidian/`).
 
 ## Install in Zed (dev extension)
 
@@ -58,6 +58,26 @@ The script copies `octo-autumn.css` into `~/Library/Application Support/abnerwor
 5. Pick **Octo Autumn** from the **Themes** menu.
 
 Only **Octo Autumn** is available for Typora today. To tweak it, edit `typora/octo-autumn.css` and re-run the install script (or re-copy) — Typora picks up changes on restart.
+
+## Install in Obsidian
+
+Obsidian themes are installed per-vault, into `<vault>/.obsidian/themes/Octo Autumn/`.
+
+**Quick install (macOS/Linux):**
+
+```bash
+./obsidian/install.sh /path/to/your/vault
+```
+
+The script copies `theme.css` and `manifest.json` into `<vault>/.obsidian/themes/Octo Autumn/` (creating the folder if needed).
+
+**Manual install (all platforms):**
+
+1. In your vault's `.obsidian/themes/` folder, create a subfolder named `Octo Autumn`.
+2. Copy `obsidian/theme.css` and `obsidian/manifest.json` into it.
+3. In Obsidian, open **Settings → Appearance → Themes** and pick **Octo Autumn**.
+
+Octo Autumn is a **light** theme. For the intended look, set **Settings → Appearance → Base color scheme → Light**; in dark mode the theme falls back to Obsidian's defaults. Only **Octo Autumn** is available for Obsidian today. To tweak it, edit `obsidian/theme.css` and re-copy (or re-run the install script) — toggle the theme off and on in Appearance to reload.
 
 ## Credits
 
