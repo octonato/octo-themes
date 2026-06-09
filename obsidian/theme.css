@@ -1,11 +1,10 @@
 /*
  * Octo Autumn — Obsidian theme
- * Warm cream, terracotta, olive, peach. Light appearance.
- * Palette ported from the Octo Autumn variant of octo-themes.
- *
- * Autumn is a light theme: it styles `.theme-light`. Switch Obsidian to
- * light mode (Settings -> Appearance -> Base color scheme -> Light) for the
- * intended look. Dark mode falls back to Obsidian's defaults.
+ * Follows Obsidian's light/dark toggle:
+ *   - Light: Octo Autumn — warm cream, terracotta, olive, peach.
+ *   - Dark:  Octo Aurora Borealis — deep teal, sky blue, mauve-pink, lime.
+ * Palettes ported from the Octo Autumn and Aurora Borealis variants of
+ * octo-themes. Switch via Settings -> Appearance -> Base color scheme.
  */
 
 .theme-light {
@@ -208,4 +207,222 @@
 /* Active tab header. */
 .theme-light .workspace-tab-header.is-active {
   background-color: var(--octo-bg-editor);
+}
+
+/* ===================================================================
+ * Dark mode — Octo Aurora Borealis
+ * Deep teal base, sky blue / mauve-pink / lime accents.
+ * Ported from the Octo Aurora Borealis variant of octo-themes.
+ * =================================================================== */
+
+.theme-dark {
+  /* --- Aurora Borealis palette --- */
+  --aur-bg:              #123243;  /* deep teal — chrome / sidebars */
+  --aur-bg-editor:       #142b37;  /* note surface */
+  --aur-bg-elevated:     #1a3746;  /* elevated surfaces */
+  --aur-bg-active-line:  #2b3949;  /* active line tint */
+  --aur-bg-hover:        #1a3746;  /* subtle lift on hover */
+  --aur-bg-active:       #1e3f53;  /* selected item */
+  --aur-bg-selected:     #1e3f53;  /* text selection */
+  --aur-bg-search:       #244b60;  /* search match */
+  --aur-bg-code:         #11242f;  /* code block surface */
+
+  --aur-border:          #1c3847;
+  --aur-border-strong:   #233c4a;
+  --aur-border-focus:    #049682;
+
+  --aur-fg:              #e0e2e3;
+  --aur-fg-muted:        #85a2b3;
+  --aur-fg-faint:        #3f6579;
+
+  --aur-sky:             #7ac6f5;  /* sky blue */
+  --aur-sky-bright:      #a3dbf9;
+  --aur-blue:            #4693d2;
+  --aur-blue-fn:         #4ca7ea;
+  --aur-teal:            #049682;
+  --aur-cyan:            #08b9a1;
+  --aur-cyan-bright:     #3cd0ff;
+  --aur-mauve:           #bb719b;  /* mauve-pink */
+  --aur-mauve-bright:    #d193bb;
+  --aur-green:           #46d27e;  /* lime/green */
+  --aur-green-soft:      #73d379;
+  --aur-string:          #549eff;  /* strings / numbers */
+  --aur-property:        #7acef5;
+  --aur-mustard:         #cc9d57;
+  --aur-red:             #ce5e5e;
+  --aur-comment:         #a996b9;
+  --aur-preproc:         #79bdc0;
+
+  /* --- surfaces --- */
+  --background-primary:        var(--aur-bg-editor);
+  --background-primary-alt:     var(--aur-bg-active-line);
+  --background-secondary:       var(--aur-bg);
+  --background-secondary-alt:    var(--aur-bg-elevated);
+  --background-modifier-border:        var(--aur-border);
+  --background-modifier-border-hover:  var(--aur-border-strong);
+  --background-modifier-border-focus:  var(--aur-border-focus);
+  --background-modifier-hover:         var(--aur-bg-hover);
+  --background-modifier-active-hover:  var(--aur-bg-active);
+  --background-modifier-form-field:    var(--aur-bg-editor);
+  --background-modifier-success:       var(--aur-green);
+  --background-modifier-error:         var(--aur-red);
+  --background-modifier-error-hover:   var(--aur-red);
+
+  /* --- text --- */
+  --text-normal:        var(--aur-fg);
+  --text-muted:          var(--aur-fg-muted);
+  --text-faint:          var(--aur-fg-faint);
+  --text-on-accent:      #0a151b;
+  --text-error:          var(--aur-red);
+  --text-success:        var(--aur-green);
+  --text-accent:         var(--aur-sky);
+  --text-accent-hover:    var(--aur-sky-bright);
+  --text-selection:      var(--aur-bg-selected);
+  --text-highlight-bg:    #6b5320;
+
+  /* --- interactive / accents --- */
+  --interactive-normal:        var(--aur-bg-elevated);
+  --interactive-hover:          var(--aur-border-strong);
+  --interactive-accent:         var(--aur-sky);
+  --interactive-accent-hover:    var(--aur-sky-bright);
+  --interactive-success:        var(--aur-green);
+  --caret-color:               var(--aur-cyan-bright);
+
+  /* --- headings — aurora gradient: sky -> cyan -> mauve --- */
+  --h1-color: var(--aur-sky);
+  --h2-color: var(--aur-sky);
+  --h3-color: var(--aur-cyan);
+  --h4-color: var(--aur-cyan);
+  --h5-color: var(--aur-mauve);
+  --h6-color: var(--aur-mauve);
+  --h1-weight: 700;
+  --h2-weight: 700;
+
+  /* --- inline emphasis --- */
+  --bold-color:    var(--aur-sky);
+  --italic-color:  var(--aur-mauve-bright);
+  --text-bold:     var(--aur-sky);
+  --text-italic:   var(--aur-mauve-bright);
+
+  /* --- links --- */
+  --link-color:            var(--aur-sky);
+  --link-color-hover:       var(--aur-sky-bright);
+  --link-unresolved-color:  var(--aur-mauve);
+  --link-external-color:     var(--aur-blue);
+  --link-external-color-hover: var(--aur-sky);
+
+  /* --- blockquote --- */
+  --blockquote-border-color:    var(--aur-teal);
+  --blockquote-background-color: #15323f;
+  --blockquote-color:           var(--aur-fg-muted);
+
+  /* --- horizontal rule --- */
+  --hr-color: var(--aur-border-strong);
+
+  /* --- tables --- */
+  --table-border-color:        var(--aur-border);
+  --table-header-background:     var(--aur-bg-elevated);
+  --table-row-alt-background:    #15323f;
+  --table-header-color:         var(--aur-fg);
+
+  /* --- tags --- */
+  --tag-color:       var(--aur-sky);
+  --tag-background:   var(--aur-bg-elevated);
+  --tag-border-color: var(--aur-border-strong);
+
+  /* --- lists --- */
+  --list-marker-color: var(--aur-cyan);
+  --checkbox-color:    var(--aur-green);
+  --checkbox-color-hover: var(--aur-cyan);
+  --checkbox-marker-color: #0a151b;
+
+  /* --- code (inline + block container) --- */
+  --code-background:  var(--aur-bg-code);
+  --code-normal:      var(--aur-fg);
+  --code-comment:     var(--aur-comment);
+  --code-keyword:     var(--aur-mauve);
+  --code-function:    var(--aur-blue-fn);
+  --code-string:      var(--aur-string);
+  --code-property:    var(--aur-property);
+  --code-operator:    var(--aur-fg-muted);
+  --code-tag:         var(--aur-cyan);
+  --code-value:       var(--aur-string);
+  --code-punctuation: var(--aur-fg-muted);
+  --code-important:   var(--aur-mauve-bright);
+
+  /* --- scrollbar --- */
+  --scrollbar-thumb-bg:        #153c4f99;
+  --scrollbar-active-thumb-bg:  var(--aur-teal);
+  --scrollbar-bg:              transparent;
+
+  /* --- graph view --- */
+  --graph-line:    var(--aur-border);
+  --graph-node:    var(--aur-sky);
+  --graph-node-unresolved: var(--aur-fg-faint);
+  --graph-node-focused:    var(--aur-cyan);
+  --graph-node-tag:        var(--aur-mauve);
+  --graph-node-attachment: var(--aur-mustard);
+}
+
+/* Inline code: sky-blue text on a lifted surface. */
+.theme-dark .markdown-rendered code,
+.theme-dark .cm-inline-code {
+  background: var(--aur-bg-elevated);
+  color: var(--aur-sky);
+}
+
+/* Fenced code blocks get a defined border to sit apart from the page. */
+.theme-dark .markdown-rendered pre,
+.theme-dark .HyperMD-codeblock-bg {
+  border: 1px solid var(--aur-border);
+  border-radius: 5px;
+}
+
+/* Active line tint in Live Preview / Source mode. */
+.theme-dark .cm-active.cm-line,
+.theme-dark .cm-active.HyperMD-codeblock {
+  background-color: var(--aur-bg-active-line);
+}
+
+/* Text selection. */
+.theme-dark .cm-selectionBackground,
+.theme-dark ::selection {
+  background: var(--aur-bg-selected) !important;
+}
+
+/* File explorer: teal tints for hover/active, with a cyan accent bar. */
+.theme-dark .nav-file-title:hover,
+.theme-dark .nav-folder-title:hover {
+  background-color: var(--aur-bg-hover);
+}
+
+.theme-dark .nav-file-title.is-active,
+.theme-dark .tree-item-self.is-active {
+  background-color: var(--aur-bg-active);
+  box-shadow: inset 3px 0 0 var(--aur-cyan);
+  color: var(--aur-fg);
+}
+
+/* Search highlights. */
+.theme-dark .search-result-file-matched-text,
+.theme-dark .document-search-container .search-result-file-matched-text {
+  background-color: var(--aur-bg-search);
+  color: var(--aur-fg);
+}
+
+/* Active tab header. */
+.theme-dark .workspace-tab-header.is-active {
+  background-color: var(--aur-bg-editor);
+}
+
+/* ===================================================================
+ * Layout — content column spans 90% of the view (both light & dark).
+ * Applies in Reading view and Live Preview, with or without Obsidian's
+ * "Readable line length" setting enabled.
+ * =================================================================== */
+
+.markdown-preview-view .markdown-preview-sizer,
+.markdown-source-view.mod-cm6 .cm-sizer {
+  max-width: 90% !important;
+  margin-inline: auto;
 }

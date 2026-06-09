@@ -77,7 +77,7 @@ The script copies `theme.css` and `manifest.json` into `<vault>/.obsidian/themes
 2. Copy `obsidian/theme.css` and `obsidian/manifest.json` into it.
 3. In Obsidian, open **Settings → Appearance → Themes** and pick **Octo Autumn**.
 
-Octo Autumn is a **light** theme. For the intended look, set **Settings → Appearance → Base color scheme → Light**; in dark mode the theme falls back to Obsidian's defaults. Only **Octo Autumn** is available for Obsidian today. To tweak it, edit `obsidian/theme.css` and re-copy (or re-run the install script) — toggle the theme off and on in Appearance to reload.
+The Obsidian theme follows Obsidian's light/dark toggle (**Settings → Appearance → Base color scheme**): **light** mode renders **Octo Autumn** (warm cream, terracotta, olive), **dark** mode renders **Octo Aurora Borealis** (deep teal, sky blue, mauve-pink, lime). The content column spans 90% of the view width. To tweak it, edit `obsidian/theme.css` and re-copy (or re-run the install script) — toggle the theme off and on in Appearance to reload.
 
 ## Credits
 
