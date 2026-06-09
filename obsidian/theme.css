@@ -421,6 +421,13 @@
  * "Readable line length" setting enabled.
  * =================================================================== */
 
+/* Canonical knob: drives width when "Readable line length" is on. */
+body {
+  --file-line-width: 95%;
+}
+
+/* Fallback: also widen the sizers directly so it holds when readable
+ * line length is off, and keep the column centred. */
 .markdown-preview-view .markdown-preview-sizer,
 .markdown-source-view.mod-cm6 .cm-sizer {
   max-width: 90% !important;
