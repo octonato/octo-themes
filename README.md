@@ -19,6 +19,8 @@ Each variant ships for **Zed** (`zed/`) and **iTerm2** (`iterm/`). **Octo Autumn
 4. Select the **`zed/`** folder (the one containing `extension.toml`).
 5. Open the theme picker (`cmd-k cmd-t` / `ctrl-k ctrl-t`) and pick one of the octo-themes variants.
 
+Each variant also comes in a frosted, see-through version: *Octo Autumn Blurred*, *Octo Aurora Borealis Blurred*, *Octo Roraima Blurred* and *Octo Everest Blurred*. The window background is about 85% opaque. Popups and menus stay opaque.
+
 Edits to `zed/themes/octo-themes.json` are picked up on save — reopen the theme picker to see changes.
 
 To uninstall, open **`zed: extensions`**, find *Octo* under the installed extensions, and remove it.
